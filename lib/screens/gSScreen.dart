@@ -60,18 +60,18 @@ class _GSScreenState extends State<GSScreen> {
                     ),
                   ),
                 ),
-                // Stack(
-                //   alignment: AlignmentDirectional.bottomCenter,
-                //   children: [
-                //     PageView.builder(
-                //       // onPageChanged: _onPageChanged,
-                //       // scrollDirection: Axis.horizontal,
-                //       controller: _pageController,
-                //       itemCount: gSSlideList.length,
-                //       itemBuilder: (context, index) => GSSlideWidget(index),
-                //     ),
-                //   ],
-                // ),
+                Stack(
+                  alignment: AlignmentDirectional.bottomCenter,
+                  children: [
+                    PageView.builder(
+                      onPageChanged: _onPageChanged,
+                      scrollDirection: Axis.horizontal,
+                      controller: _pageController,
+                      itemCount: gSSlideList.length,
+                      itemBuilder: (context, index) => GSSlideWidget(index),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
